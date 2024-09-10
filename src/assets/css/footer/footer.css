@@ -1,0 +1,85 @@
+.footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  background-color: var(--footer);
+}
+.footer__about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__about-title {
+  font: 500 1rem "Montserrat", sans-serif;
+  color: var(--letraFooter);
+}
+.footer__about-text {
+  font: 400 0.875rem "Hind Madurai", sans-serif;
+  color: var(--letraOpacity);
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__contact-title {
+  font: 500 1rem "Montserrat", sans-serif;
+  color: var(--letraFooter);
+}
+.footer__contact-text {
+  font: 400 0.875rem "Hind Madurai", sans-serif;
+  color: var(--letraOpacity);
+}
+.footer__follow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__follow-title {
+  font: 500 1rem "Montserrat", sans-serif;
+  color: var(--letraFooter);
+}
+.footer__follow-links {
+  display: flex;
+  gap: 10px;
+  font: 400 0.875rem "Hind Madurai", sans-serif;
+  color: var(--letraOpacity);
+}
+.footer__rights {
+  font: 400 0.875rem "Hind Madurai", sans-serif;
+  color: var(--letraFooter);
+}
+@media screen and (min-width: 375px) {
+  .footer {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 20px 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    gap: 20px;
+    grid-template-areas:
+      "title contact follow"
+      "rights rights rights";
+  }
+  .footer__about {
+    grid-area: title;
+  }
+  .footer__contact {
+    grid-area: contact;
+  }
+  .footer__follow {
+    grid-area: follow;
+  }
+  .footer__rights {
+    grid-area: rights;
+  }
+  .footer__rights-text {
+    text-align: center;
+  }
+}

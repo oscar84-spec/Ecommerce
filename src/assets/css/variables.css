@@ -1,0 +1,22 @@
+:root {
+  --fondo: #e4ebca;
+  --navBar: #65fc9a;
+  --letraColor: #1e1e1e;
+  --icons: #516474;
+  --btnPrimary: #528880;
+  --btnSecondary: #58af89;
+  --btnHover: #9dbc9f;
+  --footer: #495d74;
+  --letraFooter: #e4ebca;
+  --letraOpacity: rgba(209, 209, 209, 0.8);
+  --letraHover: #dc1903;
+}
+*,
+::after,
+*,
+::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--fondo);
+}
