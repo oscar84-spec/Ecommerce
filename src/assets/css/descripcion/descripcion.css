@@ -1,0 +1,11 @@
+.desc__desc {
+  width: 100%;
+  border: var(--btnPrimary) solid 1px;
+  padding: 5px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 7px;
+  font: 400 1rem "Alef", sans-serif;
+  resize: none;
+  border-radius: 7px;
+}

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { FaCartShopping } from "react-icons/fa6";
 import { Fade, Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -34,7 +35,9 @@ const Header = () => {
           )}
         </div>
         <Slide>
-          <div className='container__logo'></div>
+          <Link to='/'>
+            <div className='container__logo'></div>
+          </Link>
         </Slide>
       </div>
       <Slide>

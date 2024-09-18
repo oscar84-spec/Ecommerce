@@ -1,0 +1,123 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.product__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+  }
+}
+.product__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.product__info-nombre {
+  font: 500 1rem "Montserrat", sans-serif;
+  color: var(--letraColor);
+}
+.product__info-price {
+  font: 300 0.875rem "Alef", sans-serif;
+  color: var(--letraColor);
+}
+.product__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  gap: 10px;
+}
+.product__buttons-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 5px 10px;
+  font: 500 0.875rem "Alef", sans-serif;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: var(--btnPrimary);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.product__buttons-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 5px 10px;
+  font: 500 0.875rem "Alef", sans-serif;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: var(--btnSecondary);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.product__tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+.product__tags-tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--btnPrimary);
+  color: white;
+  font: 400 0.875rem "Hind Madurai", sans-serif;
+  animation: slide 2.5s infinite linear;
+  animation-fill-mode: forwards;
+  animation-direction: alternate-reverse;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(calc(-100% + 20px));
+  }
+  100% {
+    transform: translateX(calc(100% - 20px));
+  }
+}
+@media screen and (min-width: 425px) {
+  .product {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .product:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(82, 136, 128, 0.8);
+    transition: all 0.3s ease-in-out;
+  }
+}

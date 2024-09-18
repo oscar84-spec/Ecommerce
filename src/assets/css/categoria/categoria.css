@@ -1,0 +1,19 @@
+.categoria {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.categoria__label {
+  font: 500 0.875rem "Alef", sans-serif;
+  color: var(--letraColor);
+}
+.categoria__select {
+  height: 30px;
+  border: var(--btnPrimary) solid 1px;
+  padding: 5px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 3px;
+  color: var(--letraColor);
+  font: 400 1rem "Alef", sans-serif;
+}
