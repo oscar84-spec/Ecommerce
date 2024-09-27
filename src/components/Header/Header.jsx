@@ -18,18 +18,18 @@ const Header = () => {
           {openMenu && (
             <Fade>
               <nav className='container__menu-nav'>
-                <a href='' className='container__menu-nav-link'>
+                <Link to='/' className='container__menu-nav-link'>
                   Inicio
-                </a>
-                <a href='' className='container__menu-nav-link'>
+                </Link>
+                <Link to='/nuevoProducto' className='container__menu-nav-link'>
                   Productos
-                </a>
-                <a href='' className='container__menu-nav-link'>
+                </Link>
+                <Link to='' className='container__menu-nav-link'>
                   Nosotros
-                </a>
-                <a href='' className='container__menu-nav-link'>
+                </Link>
+                <Link to='' className='container__menu-nav-link'>
                   Contacto
-                </a>
+                </Link>
               </nav>
             </Fade>
           )}
@@ -42,25 +42,25 @@ const Header = () => {
       </div>
       <Slide>
         <nav className='container__menu-menu'>
-          <a href='' className='container__menu-nav-link'>
+          <Link to='/' className='container__menu-nav-link'>
             Inicio
-          </a>
-          <a href='' className='container__menu-nav-link'>
+          </Link>
+          <Link to='/nuevoProducto' className='container__menu-nav-link'>
             Productos
-          </a>
-          <a href='' className='container__menu-nav-link'>
+          </Link>
+          <Link to='' className='container__menu-nav-link'>
             Nosotros
-          </a>
-          <a href='' className='container__menu-nav-link'>
+          </Link>
+          <Link to='' className='container__menu-nav-link'>
             Contacto
-          </a>
+          </Link>
         </nav>
       </Slide>
       <div className='container__cart'>
         <Slide>
-          <i className='container__cart-icon'>
+          <Link to={"/carrito"} className='container__cart-icon'>
             <FaCartShopping />
-          </i>
+          </Link>
         </Slide>
       </div>
     </header>

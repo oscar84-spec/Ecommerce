@@ -1,0 +1,109 @@
+.producto {
+  height: max-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.producto__container-imgs {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.producto__img {
+  width: 100%;
+  height: 250px;
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 7px;
+  }
+}
+.producto__bgImg {
+  width: 100%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+  grid-template-areas: ". . . .";
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.producto__container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .producto__nombre {
+    font: 700 1.5rem "Montserrat", sans-serif;
+  }
+  .producto__price {
+    font: 500 1rem "Hind Madurai", sans-serif;
+  }
+  .producto__descripcion {
+    font: 400 1rem "Hind Madurai", sans-serif;
+    color: #535353;
+  }
+}
+.producto__button {
+  height: 35px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: var(--btnPrimary);
+  color: white;
+  font: 500 1rem "Hind Madurai", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 375px) {
+  .producto {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .producto {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .producto {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .producto__container-imgs {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .producto {
+    height: calc(100vh - 50px);
+  }
+  .producto__container-imgs {
+    width: 500px;
+    height: max-content;
+    img {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  .producto__bgImg {
+    height: max-content;
+    img {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

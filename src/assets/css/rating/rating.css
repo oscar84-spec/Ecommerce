@@ -1,0 +1,11 @@
+.rating__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+input[type="radio"] {
+  display: none;
+}
+.rating__star {
+  cursor: pointer;
+}

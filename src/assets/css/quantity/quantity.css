@@ -1,0 +1,19 @@
+.quan__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quan__button {
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font: 400 1.275rem "Alef", sans-serif;
+  color: var(--letraColor);
+  border-radius: 3px;
+}
+.quan__number {
+  font: 600 1.275rem "Alef", sans-serif;
+  color: var(--letraColor);
+}

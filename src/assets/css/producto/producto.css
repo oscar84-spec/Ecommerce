@@ -10,9 +10,20 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  position: relative;
   &:hover {
     transform: scale(1.05);
   }
+}
+.product__offer {
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  font: 400 0.875rem "Hind Madurai", sans-serif;
+  color: white;
+  background-color: rgb(255, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .product__img {
   display: flex;
@@ -36,9 +47,21 @@
   font: 500 1rem "Montserrat", sans-serif;
   color: var(--letraColor);
 }
+.product__price-container {
+  display: flex;
+  flex-direction: column;
+}
 .product__info-price {
   font: 300 0.875rem "Alef", sans-serif;
   color: var(--letraColor);
+}
+.product__info-newprice {
+  font: 500 0.875rem "Alef", sans-serif;
+  color: var(--letraColor);
+}
+.offers {
+  color: rgb(153, 153, 153);
+  text-decoration: line-through;
 }
 .product__buttons {
   display: flex;

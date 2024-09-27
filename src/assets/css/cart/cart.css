@@ -1,0 +1,26 @@
+.cart__container {
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.cart__table {
+  border-collapse: collapse;
+  height: max-content;
+  font: 500 1rem "Monserrat", sans-serif;
+  color: var(--letraColor);
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+td {
+  text-align: right;
+}
+.cart__table-row:nth-child(odd) {
+  background-color: var(--btnPrimary);
+  color: white;
+  font: 400 1rem "Hind Madurai", sans-serif;
+}

@@ -1,0 +1,24 @@
+.confirmacion__container {
+  padding: 20px;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fondo);
+}
+.confirmacion__img {
+  width: 50%;
+  height: 200px;
+  background: url(/check.svg) center/contain no-repeat;
+}
+.confirmacion__text {
+  font: 500 1rem "Alef", sans-serif;
+  color: var(--letraColor);
+  text-align: center;
+}
+@media screen and (min-width: 425px) {
+  .confirmacion__img {
+    width: 150px;
+  }
+}

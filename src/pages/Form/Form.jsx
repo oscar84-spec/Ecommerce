@@ -12,6 +12,9 @@ const Formulario = () => {
   const [precio, setPrecio] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [categoria, setCategoria] = useState("");
+  const [nuevoPrecio, setNuevoPrecio] = useState("0");
+
+  const [offers, setOffers] = useState(false);
 
   const navigate = useNavigate();
 
@@ -27,21 +30,31 @@ const Formulario = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await addProduct(nombre, precio, url__img, descripcion, categoria);
+    await addProduct(
+      nombre,
+      precio,
+      url__img,
+      descripcion,
+      categoria,
+      offers,
+      nuevoPrecio
+    );
     setUrlImg("");
     setNombre("");
     setPrecio("");
     setDescripcion("");
     setCategoria("");
+    setOffers(false);
+    setNuevoPrecio("");
 
     if (addProduct) {
-      navigate("/");
+      navigate("/confirmacion");
     }
   };
   return (
     <section className='form'>
       <h3 className='form__title'>Agregar un nuevo Producto</h3>
-      <form action='' className='form__form' onSubmit={handleSubmit}>
+      <form className='form__form' onSubmit={handleSubmit}>
         <Input
           label='Url de la imagen'
           nameLabel='url'
@@ -63,6 +76,28 @@ const Formulario = () => {
           valor={precio}
           setValor={setPrecio}
         />
+        {offers ? (
+          <div className='offer__container'>
+            <Input
+              label='Nuevo Precio'
+              nameLabel='newPrecio'
+              tipo='number'
+              valor={nuevoPrecio}
+              setValor={setNuevoPrecio}
+            />
+            <button
+              className='form__button-cancel-offer'
+              onClick={() => setOffers(!offers)}
+            >
+              Cancelar
+            </button>
+          </div>
+        ) : (
+          <button className='form__offer' onClick={() => setOffers(!offers)}>
+            Agregar oferta
+          </button>
+        )}
+
         <Categorias
           valor={categoria}
           setValor={setCategoria}

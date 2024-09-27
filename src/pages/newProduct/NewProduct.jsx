@@ -3,19 +3,25 @@ import { IoIosAdd } from "react-icons/io";
 import "/src/assets/css/nuevoProducto/nuevo_producto.css";
 import Product from "../../components/Product/Product";
 import { getProducts } from "../../JS/fetch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NewProduct = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const fetchProducts = async () => {
-    const data = await getProducts();
-    setProducts(data);
-  };
-  if (products.length === 0) {
-    fetchProducts();
-  }
+  useEffect(() => {
+    try {
+      const fetchProducts = async () => {
+        const data = await getProducts();
+        setProducts(data);
+      };
+      fetchProducts();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   if (loading) {
     return <h2>Cargando...</h2>;

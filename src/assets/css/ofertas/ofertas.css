@@ -1,0 +1,38 @@
+.ofertas {
+  height: max-content;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ofertas__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ofertas__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ofertas__title-title {
+  font: 500 1rem "Montserrat", sans-serif;
+  color: var(--letraColor);
+}
+.ofertas__productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (min-width: 425px) {
+  .ofertas__productos {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ofertas__productos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
