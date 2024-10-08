@@ -53,7 +53,7 @@
 .container__logo {
   width: 150px;
   height: 15px;
-  background: url(logoEcommerce.svg) center / cover no-repeat;
+  background: url(/logoEcommerce.svg) center / cover no-repeat;
 }
 .container__cart-icon {
   svg {
